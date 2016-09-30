@@ -44,7 +44,21 @@ public class TeamTest {
         System.out.println("myTeam: " + myTeam);
         System.out.println("myTeam: " + myTeam.toString());
 
-        
+
+        System.out.print("Comparing my teams.. they are");
+        if ( ! myTeam.equals(myOtherTeam)) {
+            System.out.print(" not");
+        }
+        System.out.println(" the same");
+
+        Team teamWithName     = new Team("AS Roma");
+        Team teamWithSameName = new Team("AS Roma");
+        System.out.print("Comparing two teams objects with the same name.. they are");
+        if ( ! teamWithName.equals(teamWithSameName)) {
+            System.out.print(" not");
+        }
+        System.out.println(" the same");
+
         
     }
 }
