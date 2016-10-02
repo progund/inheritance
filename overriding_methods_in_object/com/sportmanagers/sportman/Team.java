@@ -15,7 +15,7 @@ public class Team {
         this.members = new ArrayList<>();
     }
 
-    public Team(String name, ArrayList members) {
+    public Team(String name, ArrayList<Member> members) {
         this.name    = name;
         this.members = members;
     }
@@ -24,7 +24,7 @@ public class Team {
         return name;
     }
     
-    public ArrayList members() {
+    public ArrayList<Member> members() {
         return members;
     }
 
