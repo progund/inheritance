@@ -7,14 +7,14 @@ public class Team {
     private String    name;
 
     // List of members (later on we will change the type of this list to java.util.List)
-    private ArrayList members;
+    private ArrayList<Member> members;
     
     public Team(String name) {
         this.name = name;
         this.members = new ArrayList<>();
     }
 
-    public Team(String name, ArrayList members) {
+    public Team(String name, ArrayList<Member> members) {
         this.name    = name;
         this.members = members;
     }
@@ -23,7 +23,7 @@ public class Team {
         return name;
     }
     
-    public ArrayList members() {
+    public ArrayList<Member> members() {
         return members;
     }
 
