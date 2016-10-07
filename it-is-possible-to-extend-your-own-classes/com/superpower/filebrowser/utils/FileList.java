@@ -29,6 +29,7 @@ public class FileList {
         // of this method only uses the methods as "provided" by List
         List<FBFile> list = new ArrayList<FBFile>();
         
+        // Note that we use File below. File is a class in Java.
         File[] files = dir.listFiles();
         for (File file : files) {
             if (file.isFile()) {
