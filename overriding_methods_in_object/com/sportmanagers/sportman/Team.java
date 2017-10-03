@@ -34,11 +34,7 @@ public class Team {
 
 
     public String toString() {
-        String result = this.name;
-
-        // Solution using Arrays.toString
-        // * members.toArray() transforms our ArrayList to an Array
-        result += " members: " + Arrays.toString(members.toArray());
+        return this.name + " members: " + members;
 
         // Solution where we loop and add the String representations
         // of our Member instances one by one
@@ -51,7 +47,6 @@ public class Team {
         }
         result += " ]";
         */
-        return result;
     }
 
 
