@@ -24,6 +24,7 @@ public class Team {
         return name;
     }
     
+    // List of members (later on we will change the type of this list to java.util.List)
     public ArrayList<Member> members() {
         return members;
     }

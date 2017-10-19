@@ -10,6 +10,7 @@ public class TeamTest {
     public static void main(String[] args) {
 
         // Create an ArrayList with three members (to pass to the constructor)
+      // ... later on we will change the type of this list to java.util.List
         ArrayList<Member> threeMembers = new ArrayList<>();
         threeMembers.add(new Member("Ada", "ada@lovelace.org", 1));
         threeMembers.add(new Member("Bart", "bart@simpson.net", 2));
