@@ -21,7 +21,7 @@ public class TeamTest {
 
     // Verify size (three members - so the size should be three)
     System.out.print("Checking size of myTeam:       ");
-    assert (myTeam.members().size() == 3) : "Wrong size, expected 3";
+    assert (myTeam.numberOfMembers() == 3) : "Wrong size, expected 3";
     System.out.println("ok");
 
     // Crete another team, pass a name ... no list 
@@ -29,7 +29,7 @@ public class TeamTest {
 
     // Verify size (no members - so the size should be 0)
     System.out.print("Checking size of myOtherTeam:  ");
-    assert (myOtherTeam.members().size() == 0) : "Wrong size, expected 0";
+    assert (myOtherTeam.numberOfMembers() == 0) : "Wrong size, expected 0";
     System.out.println("ok");
 
     // Add the members to the second team
@@ -37,14 +37,13 @@ public class TeamTest {
     myOtherTeam.addMember(new Member("Maggie", "maggie@simpson.net", 5));
     myOtherTeam.addMember(new Member("Ned", "ned@flanders.org", 6));
         
-    // Verify size (no members - so the size should be 3)
+    // Verify size (We added three members - so the size should be 3)
     System.out.print("Checking size of myOtherTeam:  ");
-    assert (myOtherTeam.members().size() == 3) : "Wrong size, expected 3";
+    assert (myOtherTeam.numberOfMembers() == 3) : "Wrong size, expected 3";
     System.out.println("ok");
 
     System.out.println("myTeam: " + myTeam);
     System.out.println("myTeam: " + myTeam.toString());
-
 
     System.out.print("Comparing my teams.. they are");
     if ( ! myTeam.equals(myOtherTeam)) {
@@ -54,7 +53,8 @@ public class TeamTest {
 
     Team teamWithName = new Team("AS Roma");
     Team teamWithSameName = new Team("AS Roma");
-    System.out.print("Comparing two teams objects with the same name.. they are");
+    System.out.print("Comparing two teams objects " +
+                     "with the same name.. they are");
     if ( ! teamWithName.equals(teamWithSameName)) {
       System.out.print(" not");
     }

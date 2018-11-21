@@ -10,7 +10,7 @@ public class MemberTest {
     // Note, later we will learn to use List<Member>
     // as the reference type.
     ArrayList<Member> register = new ArrayList<>();
-
+    
     register.add(new Member("Ada", "ada@lovelace.org", 1));
     register.add(new Member("Bart", "bart@simpson.net", 2));
     register.add(new Member("Marge", "marge@simpson.net", 3));
@@ -24,7 +24,7 @@ public class MemberTest {
     // in an variable(s), array or ArrayList, never the actual
     // object.
     //
-        
+    
     /*
       Member m1 = new Member("Ada", "ada@lovelace.org", 1);
       Member m2 =new Member("Bart", "bart@simpson.net", 2);
@@ -44,13 +44,11 @@ public class MemberTest {
       m1 =new Member("Marge", "marge@simpson.net", 3);
       register.add(m1);
     */
-        
-        
+    
     for (Member m : register) {
       System.out.println(m);
     }
         
   }
-
     
 }
