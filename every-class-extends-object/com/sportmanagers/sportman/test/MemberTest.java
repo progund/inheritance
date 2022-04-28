@@ -1,7 +1,7 @@
 package com.sportmanagers.sportman.test;
 
-import java.util.ArrayList;
 import com.sportmanagers.sportman.Member;
+import java.util.ArrayList;
 
 public class MemberTest {
 
