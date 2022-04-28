@@ -1,9 +1,8 @@
 package com.sportmanagers.sportman.test;
 
-import java.util.ArrayList;
-
 import com.sportmanagers.sportman.Member;
 import com.sportmanagers.sportman.Team;
+import java.util.ArrayList;
 
 public class TeamTest {
 
@@ -46,16 +45,16 @@ public class TeamTest {
     System.out.println("myTeam: " + myTeam.toString());
 
     System.out.print("Comparing my teams.. they are");
-    if ( ! myTeam.equals(myOtherTeam)) {
+    if (! myTeam.equals(myOtherTeam)) {
       System.out.print(" not");
     }
     System.out.println(" the same");
 
     Team teamWithName = new Team("AS Roma");
     Team teamWithSameName = new Team("AS Roma");
-    System.out.print("Comparing two teams objects " +
-                     "with the same name.. they are");
-    if ( ! teamWithName.equals(teamWithSameName)) {
+    System.out.print("Comparing two teams objects "
+                     + "with the same name.. they are");
+    if (! teamWithName.equals(teamWithSameName)) {
       System.out.print(" not");
     }
     System.out.println(" the same");        
