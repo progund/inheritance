@@ -2,17 +2,17 @@ package com.sportmanagers.sportman;
 
 public class Member {
 
-  private String   name;
-  private String   email;
-  private int      id;
+  private String name;
+  private String email;
+  private int id;
 
-  private final static String SEPARATOR = "|";
+  private static final String SEPARATOR = "|";
   private static final int HASH_PRIME = 17;
 
   public Member(String name, String email, int id) {
-    this.name  = name;
+    this.name = name;
     this.email = email;
-    this.id    = id;
+    this.id = id;
   }
 
   public int id() {
@@ -24,10 +24,12 @@ public class Member {
   }
 
   public String toString() {
-    return /*super.toString() + ":" + */ this.id + SEPARATOR + this.name + SEPARATOR + this.email;
+    return /*super.toString() + ":" + */ this.id + SEPARATOR
+           + this.name + SEPARATOR + this.email;
   }
 
-  public boolean equals (Object obj) {
+  @Override
+  public boolean equals(Object obj) {
 
     // this - the object associated with the invcation
     // obj - the object that this should be compared with
@@ -46,10 +48,13 @@ public class Member {
     // .... you need to add code to check if the instances 
     // this and obj are equal
     Member m = (Member)obj;
-    return this.name.equals(m.name) && this.email.equals(m.email) && this.id == m.id  ;
+    return this.name.equals(m.name)
+        && this.email.equals(m.email)
+        && this.id == m.id;
   }
 
-  public int hashCode () {
+  @Override
+  public int hashCode() {
     int result = HASH_PRIME;
     result = 31 * result + name.hashCode();
     result = 31 * result + email.hashCode();
@@ -57,5 +62,4 @@ public class Member {
     return result;
   }
 
-    
 }
